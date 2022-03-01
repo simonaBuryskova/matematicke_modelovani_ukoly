@@ -1,0 +1,1345 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     54121,       1337]
+NotebookOptionsPosition[     49732,       1247]
+NotebookOutlinePosition[     50958,       1285]
+CellTagsIndexPosition[     50784,       1276]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ StyleBox["\nUk\[AAcute]zka vyu\[ZHacek]it\[IAcute] Schl\[ODoubleDot]milchovy \
+v\[EHacek]ty na p\[RHacek]erovn\[AAcute]n\[IAcute] \[RHacek]ady    ", "Title",
+  FontSize->36],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{
+            StyleBox["k", "TI"], "\[LongEqual]", "1"}], "\[Infinity]", 
+          LimitsPositioning -> True], 
+         FractionBox[
+          SuperscriptBox[
+           RowBox[{"(", "-1", ")"}], 
+           RowBox[{
+             StyleBox["k", "TI"], "-", "1"}]], 
+          StyleBox["k", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\sum_{k=1}^{\\infty}{\\frac{(-1)^{k-1}}{k}}", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "67d7e751-65a0-4887-8e6d-223e5c37376b"]
+}], "Title",
+ CellChangeTimes->{{3.8550310094195414`*^9, 3.8550310576400533`*^9}, 
+   3.855031136518138*^9, 3.8550313388758965`*^9, 3.855031388165016*^9, {
+   3.8550315354245453`*^9, 3.8550315475841093`*^9}, {3.8550315894848166`*^9, 
+   3.855031591325776*^9}, {3.8550316430461826`*^9, 3.855031643618004*^9}, {
+   3.855031783139042*^9, 3.8550318131026955`*^9}, 3.8550319143199263`*^9, {
+   3.855032288818987*^9, 3.8550322898984365`*^9}, 3.8550375545892167`*^9, 
+   3.855072512336963*^9},
+ FontSize->36,ExpressionUUID->"c86a791d-dff2-49f3-8926-edee2968f52a"],
+
+Cell["Simona Bury\[SHacek]kov\[AAcute], Jan Hrube\[SHacek]", "Subsubtitle",
+ CellChangeTimes->{{3.855031427672313*^9, 3.8550314348155575`*^9}, {
+  3.855031572987985*^9, 3.8550315821391125`*^9}, {3.8550322911559744`*^9, 
+  3.855032292240182*^9}, {3.85503757800278*^9, 
+  3.855037580004893*^9}},ExpressionUUID->"b33b5329-21da-4760-9506-\
+3b690e4aa9d2"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ " Zkouman\[AAcute] \[RHacek]ada"
+}], "Section",
+ CellChangeTimes->{{3.855031997006855*^9, 3.8550320075275307`*^9}, {
+  3.8550321752760887`*^9, 
+  3.855032185001253*^9}},ExpressionUUID->"5d63ac4e-51be-459b-97f1-\
+243d32fb3c3f"],
+
+Cell["\<\
+Vyp\[IAcute]\[SHacek]eme si pro p\[RHacek]edstavu n\[EHacek]kolik prvn\
+\[IAcute]ch \[CHacek]len\[URing] zkouman\[EAcute] \[RHacek]ady:\
+\>", "Text",
+ CellChangeTimes->{{3.8550320227472563`*^9, 3.8550320682200003`*^9}, {
+  3.8550343189955263`*^9, 
+  3.8550343259717093`*^9}},ExpressionUUID->"9824c942-79d8-4c51-861f-\
+f232f8b86a79"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"clenyUkazka", " ", "=", " ", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"-", "1"}], ")"}], "^", 
+      RowBox[{"(", 
+       RowBox[{"k", "-", "1"}], ")"}]}], "/", "k"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", "1", ",", "10"}], "}"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"cleny", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"-", "1"}], ")"}], "^", 
+       RowBox[{"(", 
+        RowBox[{"k", "-", "1"}], ")"}]}], "/", "k"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "1", ",", "100"}], "}"}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.855036715075105*^9, 3.855036716170495*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"2352efb2-099a-4471-a784-1cc486c546df"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", 
+   RowBox[{"-", 
+    FractionBox["1", "2"]}], ",", 
+   FractionBox["1", "3"], ",", 
+   RowBox[{"-", 
+    FractionBox["1", "4"]}], ",", 
+   FractionBox["1", "5"], ",", 
+   RowBox[{"-", 
+    FractionBox["1", "6"]}], ",", 
+   FractionBox["1", "7"], ",", 
+   RowBox[{"-", 
+    FractionBox["1", "8"]}], ",", 
+   FractionBox["1", "9"], ",", 
+   RowBox[{"-", 
+    FractionBox["1", "10"]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.8550366515683765`*^9, 3.8550367255430517`*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"b0baa5a7-b9ec-42f9-b5f3-0061445bb7e5"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.8550366285019293`*^9, 3.855036629481357*^9}},
+ CellLabel->"",ExpressionUUID->"3c460200-b9d7-40e8-866f-0caa29b54c29"],
+
+Cell["\<\
+Posloupnost \[CHacek]\[AAcute]ste\[CHacek]n\[YAcute]ch sou\[CHacek]t\[URing] \
+pro prvn\[IAcute]ch 100 \[CHacek]len\[URing] vypad\[AAcute] takto (zkr\
+\[AAcute]cen\[EHacek]):\
+\>", "Text",
+ CellChangeTimes->{{3.855032099043215*^9, 3.855032109018152*^9}, {
+  3.8550321885771008`*^9, 3.8550321903279276`*^9}, {3.855036863246955*^9, 
+  3.8550368826958733`*^9}, {3.8550369238413277`*^9, 
+  3.8550369272065945`*^9}},ExpressionUUID->"5124646d-6345-42bd-817f-\
+e8ccf225e8dd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"castecnesoucty", " ", "=", " ", 
+   RowBox[{"Accumulate", "[", "cleny", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Short", "[", 
+  RowBox[{"castecnesoucty", ",", "3"}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.8550367507397594`*^9, 3.8550368274774847`*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"5aaa2908-1456-4e9d-be98-b51eb0deeff7"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"{", 
+   RowBox[{"1", ",", 
+    FractionBox["1", "2"], ",", 
+    FractionBox["5", "6"], ",", 
+    FractionBox["7", "12"], ",", 
+    RowBox[{"\[LeftSkeleton]", "93", "\[RightSkeleton]"}], ",", 
+    FractionBox["9594516020402274303348963549166209678997", 
+     "13944075045942495432906761787062460711360"], ",", 
+    FractionBox["9735365263290582338024789425803204231637", 
+     "13944075045942495432906761787062460711360"], ",", 
+    FractionBox["47979622564155786918478609039662898122617", 
+     "69720375229712477164533808935312303556800"]}], "}"}],
+  Short[#, 3]& ]], "Output",
+ CellChangeTimes->{{3.855036811288869*^9, 3.8550368282250333`*^9}},
+ CellLabel->
+  "Out[18]//Short=",ExpressionUUID->"90214b67-001e-4a19-b0b2-e196dfad5ffb"]
+}, Open  ]],
+
+Cell[TextData[{
+ "\[CapitalRHacek]ada je neabsolutn\[EHacek] konvergentn\[IAcute]",
+ ButtonBox[Cell[TextData[StyleBox["1",
+  FontVariations->{"CompatibilityType"->"Superscript"}]], "Citation",
+  Editable->False,
+  TaggingRules->{
+   NoteData -> RowBox[{"KOP\[CapitalAAcute]\[CapitalCHacek]EK", ",", " ", 
+       Cell[
+        BoxData[
+         FormBox[
+          RowBox[{
+            RowBox[{"Ji\[RHacek]\[IAcute]", ".", " ", "Matematick\[AAcute]"}],
+             " ", "anal\[YAcute]za", " ", "nejen", " ", "pro", " ", "fyziky", 
+            " ", 
+            RowBox[{
+              RowBox[{"(", "II", ")"}], ".", " ", "4."}], " ", 
+            RowBox[{"vyd", ".", " ", 
+              RowBox[{"Praha", ":", " ", "Matfyzpress"}]}]}], 
+          TraditionalForm]]], ",", " ", 
+       Cell[
+        BoxData[
+         FormBox[
+          RowBox[{
+            RowBox[{"2015.", " ", "ISBN", " ", "978"}], "-", "80", "-", 
+            "7378", "-", "282", "-", "5."}], TraditionalForm]]]}]},
+  ExpressionUUID->"cbae047e-a8f7-414b-a550-e731e45d97e2"],
+  BaseStyle->"Hyperlink",
+  ButtonData->"00009601"],
+ " (harmonick\[AAcute] \[RHacek]ada toti\[ZHacek] diverguje) a plat\[IAcute] ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{
+            StyleBox["k", "TI"], "\[LongEqual]", "1"}], "\[Infinity]", 
+          LimitsPositioning -> True], 
+         FractionBox[
+          SuperscriptBox[
+           RowBox[{"(", "-1", ")"}], 
+           RowBox[{
+             StyleBox["k", "TI"], "-", "1"}]], 
+          StyleBox["k", "TI"]], "\[LongEqual]", "ln", "2"}], TraditionalForm],
+      "errors" -> {}, "input" -> 
+     "\\sum_{k=1}^{\\infty}{\\frac{(-1)^{k-1}}{k}} = \\ln{2}", "state" -> 
+     "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "75edee40-9232-4e16-81bd-bd7496cbd518"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.855032199697275*^9, 3.85503226904501*^9}, {
+  3.8550323102319856`*^9, 3.8550323283097367`*^9}, {3.855035219693495*^9, 
+  3.8550352341039405`*^9}, {3.8550362950884686`*^9, 3.8550362951204157`*^9}, {
+  3.855052997850755*^9, 3.8550529978587065`*^9}, {3.85505312010014*^9, 
+  3.8550531201041307`*^9}, {3.85505317068682*^9, 
+  3.8550531706948004`*^9}},ExpressionUUID->"0fa321be-de72-4d12-bfa3-\
+00fedba5c815"],
+
+Cell["\<\
+Konvergenci posloupnosti \[CHacek]\[AAcute]ste\[CHacek]n\[YAcute]ch sou\
+\[CHacek]t\[URing] k sou\[CHacek]tu \[RHacek]ady zn\[AAcute]zor\[NHacek]uje \
+Graf 1.
+\
+\>", "Text",
+ CellChangeTimes->{{3.8550323711726885`*^9, 3.8550324132504845`*^9}, {
+  3.855036172484829*^9, 
+  3.855036203350813*^9}},ExpressionUUID->"c8fb231f-2147-4340-8b51-\
+c8bb16bc4cdd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"castecnesouctyPlot", " ", "=", " ", 
+   RowBox[{"ListPlot", "[", "castecnesoucty", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"limitaPuvodni", "=", " ", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"Log", "[", "2", "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", " ", "1", ",", " ", "100"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"castecnesouctyPlot", ",", " ", "limitaPuvodni", ",", "%21", ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"HoldForm", "[", 
+       TemplateBox[<|"boxes" -> FormBox[
+           StyleBox["n", "TI"], TraditionalForm], "errors" -> {}, "input" -> 
+         "n", "state" -> "Boxes"|>,
+        "TeXAssistantTemplate"], "]"}], ",", 
+      RowBox[{"HoldForm", "[", 
+       TemplateBox[<|"boxes" -> FormBox[
+           SubscriptBox[
+            StyleBox["a", "TI"], 
+            StyleBox["n", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+         "a_n", "state" -> "Boxes"|>,
+        "TeXAssistantTemplate"], "]"}]}], "}"}]}], ",", 
+   RowBox[{"PlotLabel", "\[Rule]", 
+    RowBox[{
+    "HoldForm", "[", 
+     "\"\<Graf 1: Konvergence posl.\[CHacek]\[AAcute]ste\[CHacek]n\[YAcute]ch \
+sou\[CHacek]t\[URing]\>\"", "]"}]}], ",", 
+   RowBox[{"LabelStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"GrayLevel", "[", "0", "]"}], "}"}]}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{
+  3.8550370574419174`*^9, {3.8550371439670563`*^9, 3.8550371725744705`*^9}, {
+   3.855037205187627*^9, 3.855037209912877*^9}, {3.855037242505971*^9, 
+   3.855037296731674*^9}, {3.855049862927433*^9, 3.855049881538881*^9}, {
+   3.8550499144556456`*^9, 3.855049928220199*^9}},
+ CellLabel->"In[58]:=",ExpressionUUID->"e1eac042-543f-44d0-a875-0a4ae4ff5f51"],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxVy39M1HUcx/GTkF1u8cPORsQfSCcikXmIgnp0L8BDUDiOO+AOCH8kYLay
+BoFHZsNGyhALxg83fpnRkh871BUipxMQaJwbEBKGAYP4JRqwGwYGmCXxff3R
+e9/vPnvtsef6dz/SJFqJRKKE5//yu3IWxf9fEVaeYWGLUVO9fI+EbS/sEWFL
+4PDfPRS2I27eWL5RYTtj2Fr1/JsUtouwx4Ttila/gRa/gQfCliJvTVXumiq6
+G9KN3o2teXR3dFllS5we0D0g8xAd94+ne+LC6voxZ8m4sDejeeN9G8V2+hZh
+02WoePHGpIsj3Quy6cdp1hH0rZCKb414iujeyD4mDclPom/D1Onq6pqpCWFv
+x/G6hHyVge6Dc0fmHE8M0H3hu/ablg1n6DuQ8dipr6eTvhNdQ0NuTfn0XWib
+bUh2b6HL8dnBwk1F5XQ/bBNfanRooL8N6ZPCWlElXYE3HZ0aA67QIWzBM4AN
+C2WdGZV0f3iLjYNf19P90fvK+c/LL9IDUJr1g9L+Fj0AyUUxtoYSeiAWsj7p
+G22hB8KpKGjBUkjfjTBzuqfUTN+NddXzvrO5dCXGyraKJzroSkhOK6yO5tCD
+EFtWmrbzLj0IpkrNr8os+h5cDs8ueOsefQ+8Jid6T2TSg3HGT/5G9316MK7W
+pW4RnaKH4CWlr9umQXoIasf7fjKfpO9Fb9yuGcUwfS9K6iX3fv6Uvg8utRuv
+OI/S96GuM63B1kAPRe6XYwVt4/RQ5Hx19/rJVHoYLpvM04pJehgmD7cNO6bQ
+VTjQL9fnPqKrILttGun/mB4O41XDb6Ypejg6GhYXbx+jq1f2jOBQo7bZ0H/n
+A8Ez1PDqvtZTYxG8SQ27gqRiy/vsI3D+tZn1hln2EShfZa6QHWUfAdWiVuvx
+J/sImMQG49kj7DUo87fJa51jr8HFYInxaSJ7Da75N7cHP2GvwesjBV1fJLDX
+Iinu2x+v/8VeizlrabLzYfZaJD4z/b5ukb0W3go75/ZD7CPR2VdZd2iJfSRS
+vUvTMw+yj4RDa3xK2VP2kRhOKdGpD7CPQvv0DsWdv9lHwV1VfMFjP/so2McW
+uD58xj4KFfLiyLXx7KMR1N5uu/QP+2iEzvvm2rzDPhqllsEh0SphN0VDPu+T
+YRPHXod6c8/+JTp0sPOISnCIZa9Dx+D3gX9YsddBNvpejlsMez0Gzr3s0/0C
+ez1uvtoYrdSz1+NSvOsvRmv2enxXWbH5Qx37GGgtmVWnVk8o/gUScO0f
+      "]]}, {{}, {}}}, {{{}, {}, 
+     TagBox[
+      {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], 
+       Opacity[1.], LineBox[CompressedData["
+1:eJxTTMoPSmViYGAwAWIQ7Z0SKcfE8MH+veWvf056z+x3aT1UPtj9H86fUrFF
+5EA3uwOML3X6mrqCsQic79zdY5gtKAPnHwrSaJN8ogjnr9/67ICusBqc77nx
+YOHxX5pw/gamn/mCZnpw/sQD0a/P6BnC+Qo+J29eljOG86cxPX23ycIUzk9i
+5d9/Rc8czt8yr+awqLQlnP8macY7PUNrOL+6+NCVLmVbOP/DulkP99nbw/ll
+DtGCnCsd4Pz5/gX8IQsc4XzrkjsK3Wuc4Hym/ef7Hy9zhvNt5aWENLa5wPm7
+vdr0ag64wvkpcypXfNzhBuc3MB8xDT7mDucfnzBV4dpBDzg/8GXH0owdnnC+
+X/hl2+eHvRDufb3EuH2vN5wvNPWsjfAZHzj/I6fEg3VXfeH830tePsg+6wfn
+V4QKfRW55Q/nC4glbs7PCoDzWZ977ox5iuBvcbp3Yn9WIEK/oVm78XME/9sq
+S3/ZvCA4v3M7wzHxNwj+vpU3OGelB8P5a9Riwie9RfA3mC0Onp0VAufnXZwa
+KfUJwT8bOFNHsTwUzndKTVhn8RnBL2C+bHmsMgzhXhPOkpTvCP5M74DqrqJw
+ON/irVOP2g8E/43iT+/LJRFwvt69/QszdyH4+bPavv//j+ADAOf7ryI=
+        "]]},
+      Annotation[#, "Charting`Private`Tag$32962#1"]& ]}, {}}, {{{}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668],
+       AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxVy39M1HUcx/GTkF1u8cPORsQfSCcikXmIgnp0L8BDUDiOO+AOCH8kYLay
+BoFHZsNGyhALxg83fpnRkh871BUipxMQaJwbEBKGAYP4JRqwGwYGmCXxff3R
+e9/vPnvtsef6dz/SJFqJRKKE5//yu3IWxf9fEVaeYWGLUVO9fI+EbS/sEWFL
+4PDfPRS2I27eWL5RYTtj2Fr1/JsUtouwx4Ttila/gRa/gQfCliJvTVXumiq6
+G9KN3o2teXR3dFllS5we0D0g8xAd94+ne+LC6voxZ8m4sDejeeN9G8V2+hZh
+02WoePHGpIsj3Quy6cdp1hH0rZCKb414iujeyD4mDclPom/D1Onq6pqpCWFv
+x/G6hHyVge6Dc0fmHE8M0H3hu/ablg1n6DuQ8dipr6eTvhNdQ0NuTfn0XWib
+bUh2b6HL8dnBwk1F5XQ/bBNfanRooL8N6ZPCWlElXYE3HZ0aA67QIWzBM4AN
+C2WdGZV0f3iLjYNf19P90fvK+c/LL9IDUJr1g9L+Fj0AyUUxtoYSeiAWsj7p
+G22hB8KpKGjBUkjfjTBzuqfUTN+NddXzvrO5dCXGyraKJzroSkhOK6yO5tCD
+EFtWmrbzLj0IpkrNr8os+h5cDs8ueOsefQ+8Jid6T2TSg3HGT/5G9316MK7W
+pW4RnaKH4CWlr9umQXoIasf7fjKfpO9Fb9yuGcUwfS9K6iX3fv6Uvg8utRuv
+OI/S96GuM63B1kAPRe6XYwVt4/RQ5Hx19/rJVHoYLpvM04pJehgmD7cNO6bQ
+VTjQL9fnPqKrILttGun/mB4O41XDb6Ypejg6GhYXbx+jq1f2jOBQo7bZ0H/n
+A8Ez1PDqvtZTYxG8SQ27gqRiy/vsI3D+tZn1hln2EShfZa6QHWUfAdWiVuvx
+J/sImMQG49kj7DUo87fJa51jr8HFYInxaSJ7Da75N7cHP2GvwesjBV1fJLDX
+Iinu2x+v/8VeizlrabLzYfZaJD4z/b5ukb0W3go75/ZD7CPR2VdZd2iJfSRS
+vUvTMw+yj4RDa3xK2VP2kRhOKdGpD7CPQvv0DsWdv9lHwV1VfMFjP/so2McW
+uD58xj4KFfLiyLXx7KMR1N5uu/QP+2iEzvvm2rzDPhqllsEh0SphN0VDPu+T
+YRPHXod6c8/+JTp0sPOISnCIZa9Dx+D3gX9YsddBNvpejlsMez0Gzr3s0/0C
+ez1uvtoYrdSz1+NSvOsvRmv2enxXWbH5Qx37GGgtmVWnVk8o/gUScO0f
+       "]]}, {{}, {}}}, {{{}, {}, 
+      TagBox[
+       {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], 
+        Opacity[1.], LineBox[CompressedData["
+1:eJxTTMoPSmViYGAwAWIQ7Z0SKcfE8MH+veWvf056z+x3aT1UPtj9H86fUrFF
+5EA3uwOML3X6mrqCsQic79zdY5gtKAPnHwrSaJN8ogjnr9/67ICusBqc77nx
+YOHxX5pw/gamn/mCZnpw/sQD0a/P6BnC+Qo+J29eljOG86cxPX23ycIUzk9i
+5d9/Rc8czt8yr+awqLQlnP8macY7PUNrOL+6+NCVLmVbOP/DulkP99nbw/ll
+DtGCnCsd4Pz5/gX8IQsc4XzrkjsK3Wuc4Hym/ef7Hy9zhvNt5aWENLa5wPm7
+vdr0ag64wvkpcypXfNzhBuc3MB8xDT7mDucfnzBV4dpBDzg/8GXH0owdnnC+
+X/hl2+eHvRDufb3EuH2vN5wvNPWsjfAZHzj/I6fEg3VXfeH830tePsg+6wfn
+V4QKfRW55Q/nC4glbs7PCoDzWZ977ox5iuBvcbp3Yn9WIEK/oVm78XME/9sq
+S3/ZvCA4v3M7wzHxNwj+vpU3OGelB8P5a9Riwie9RfA3mC0Onp0VAufnXZwa
+KfUJwT8bOFNHsTwUzndKTVhn8RnBL2C+bHmsMgzhXhPOkpTvCP5M74DqrqJw
+ON/irVOP2g8E/43iT+/LJRFwvt69/QszdyH4+bPavv//j+ADAOf7ryI=
+         "]]},
+       Annotation[#, "Charting`Private`Tag$20057#1"]& ]}, {}}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox[
+     TagBox["n", HoldForm], TraditionalForm], 
+    FormBox[
+     TagBox[
+      SubscriptBox["a", "n"], HoldForm], TraditionalForm]},
+  AxesOrigin->{0., 0.6316116124254877},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  LabelStyle->{
+    GrayLevel[0]},
+  Method->{
+   "OptimizePlotMarkers" -> True, "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& )}},
+  PlotLabel->FormBox[
+    TagBox[
+    "\"Graf 1: Konvergence posl.\[CHacek]\[AAcute]ste\[CHacek]n\[YAcute]ch \
+sou\[CHacek]t\[URing]\"", HoldForm], TraditionalForm],
+  PlotRange->{{0., 100}, {0.6316116124254877, 0.74889556304277}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.855037291377118*^9, 3.855037298940485*^9}, 
+   3.855049888165245*^9, 3.8550499335875654`*^9},
+ CellTags->"graf1",
+ CellLabel->"Out[60]=",ExpressionUUID->"cb69b7a1-8512-4f42-97d6-3db500a8bf57"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n",
+ 
+ CounterBox["Section"],
+ " P\[RHacek]erovn\[AAcute]n\[IAcute] \[RHacek]ady pomoc\[IAcute] Schl\
+\[ODoubleDot]milchova algoritmu"
+}], "Section",
+ CellChangeTimes->{
+  3.8550323463842134`*^9, {3.8550324442251263`*^9, 3.855032466181671*^9}, {
+   3.855032519002516*^9, 3.8550325199391203`*^9}, {3.855032557304383*^9, 
+   3.8550325886756477`*^9}, 3.85505296021043*^9, {3.855053120078277*^9, 
+   3.855053142447284*^9}},ExpressionUUID->"6dd62f2a-4e44-40f3-bfa1-\
+33b92a98276e"],
+
+Cell[TextData[{
+ "Abychom uk\[AAcute]zali, \[ZHacek]e na\[SHacek]i neabsolutn\[EHacek] \
+konvergentn\[IAcute] lze p\[RHacek]erovnat tak, \[ZHacek]e sou\[CHacek]et p\
+\[RHacek]erovnan\[EAcute] \[RHacek]ady bude jin\[YAcute] ne\[ZHacek] sou\
+\[CHacek]et nep\[RHacek]erovnan\[EAcute], vyu\[ZHacek]ijeme \
+Schl\[ODoubleDot]milchovu v\[EHacek]tu",
+ ButtonBox[Cell[TextData[StyleBox["2",
+  FontVariations->{"CompatibilityType"->"Superscript"}]], "Citation",
+  Editable->False,
+  TaggingRules->{NoteData -> RowBox[{
+       Cell[
+        BoxData[
+         FormBox[
+          RowBox[{"PR\[CapitalURing]\[CapitalSHacek]A", " ", 
+            RowBox[{"V", "."}]}], TraditionalForm]]], ",", " ", 
+       Cell[
+        BoxData[
+         FormBox[
+          RowBox[{
+            RowBox[{
+              RowBox[{"T\[CapitalURing]MA", " ", 
+                RowBox[{"K", ".", " ", "Rearrangement"}], " ", "of", " ", 
+                "non"}], "-", 
+              RowBox[{"absolute", " ", "convergent", " ", "series"}], " ", 
+              "-", " ", 
+              
+              RowBox[{"how", " ", "to", " ", "prove", " ", "that", " ", 
+                "1"}]}], " ", "=", " ", 
+            RowBox[{"2.", " ", "MFF", " ", "UK"}]}], TraditionalForm]]], ",", 
+       " ", "2022."}]},ExpressionUUID->"4083f2db-c48c-4222-80e2-1ebf5b0cd1c1"],
+  BaseStyle->"Hyperlink",
+  ButtonData->"00009290"],
+ " , kter\[AAcute] je speci\[AAcute]ln\[IAcute] variantou Riemannovy v\
+\[EHacek]ty a zab\[YAcute]v\[AAcute] se p\[RHacek]erovn\[AAcute]n\[IAcute]m \
+alternuj\[IAcute]c\[IAcute] \[RHacek]ady.\n"
+}], "Text",
+ CellChangeTimes->{{3.855052879867272*^9, 3.855052956307931*^9}, {
+  3.855052997826786*^9, 3.8550529978853254`*^9}, {3.855053120164488*^9, 
+  3.8550532115661345`*^9}, {3.8550696917672043`*^9, 3.855069693286461*^9}, {
+  3.855071690973464*^9, 
+  3.855071724085927*^9}},ExpressionUUID->"766bd780-753e-4c28-8711-\
+827c7238e86e"],
+
+Cell[TextData[{
+ StyleBox["V\[EHacek]ta (Schl\[ODoubleDot]milch(1873)): ",
+  FontWeight->"Bold",
+  FontColor->GrayLevel[0.5]],
+ StyleBox["Nech\[THacek] ",
+  FontColor->GrayLevel[0.5]],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["f", "TI"], TraditionalForm], "errors" -> {}, "input" -> "f", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontColor->GrayLevel[0.5],ExpressionUUID->
+  "5c7c2f14-0d3e-4cab-ba88-5fdc479ecb5b"],
+ StyleBox[" je klesaj\[IAcute]c\[IAcute] funkce takov\[AAcute], \[ZHacek]e ",
+  FontColor->GrayLevel[0.5]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[<|"boxes" -> FormBox[
+        RowBox[{
+          UnderscriptBox["lim", 
+           RowBox[{
+             StyleBox["n", "TI"], "\[Rule]", "\[Infinity]"}], 
+           LimitsPositioning -> True], 
+          StyleBox["f", "TI"], 
+          RowBox[{"(", 
+            StyleBox["n", "TI"], ")"}], "\[LongEqual]", "0"}], 
+        TraditionalForm], "errors" -> {}, "input" -> 
+      "\\lim_{n\\to\\infty} f(n) = 0", "state" -> "Boxes"|>,
+     "TeXAssistantTemplate"], " "}], TraditionalForm]],
+  FontColor->GrayLevel[0.5],ExpressionUUID->
+  "7eb0356f-bf11-4948-87e6-711bc62d08a8"],
+ StyleBox["a nech\[THacek] ",
+  FontColor->GrayLevel[0.5]],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["K", "TI"], TraditionalForm], "errors" -> {}, "input" -> "K", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontColor->GrayLevel[0.5],ExpressionUUID->
+  "7867311a-9e08-4150-be6f-738de8a50bff"],
+ StyleBox[" je definov\[AAcute]no jako: ",
+  FontColor->GrayLevel[0.5]],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         StyleBox["K", "TI"], 
+         SubscriptBox["\[LongEqual]", 
+          RowBox[{
+            StyleBox["d", "TI"], 
+            StyleBox["e", "TI"], 
+            StyleBox["f", "TI"]}]], 
+         UnderscriptBox["lim", 
+          RowBox[{
+            StyleBox["n", "TI"], "\[Rule]", "\[Infinity]"}], 
+          LimitsPositioning -> True], 
+         RowBox[{
+           StyleBox["f", "TI"], "(", 
+           StyleBox["n", "TI"], ")"}], "."}], TraditionalForm], 
+     "errors" -> {}, "input" -> "K =_{def} \\lim_{n\\to\\infty}{f(n)}.", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontColor->GrayLevel[0.5],ExpressionUUID->
+  "b5013ab2-135e-4d3f-bbb0-efa234e1046e"],
+ StyleBox[" Nech\[THacek] alternuj\[IAcute]c\[IAcute] \[RHacek]ada ",
+  FontColor->GrayLevel[0.5]],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{
+            StyleBox["n", "TI"], "\[LongEqual]", "0"}], "\[Infinity]", 
+          LimitsPositioning -> True], 
+         RowBox[{
+           SuperscriptBox[
+            RowBox[{"(", "-1", ")"}], 
+            StyleBox["n", "TI"]], 
+           StyleBox["f", "TI"], 
+           RowBox[{"(", 
+             StyleBox["n", "TI"], ")"}]}]}], TraditionalForm], "errors" -> {},
+      "input" -> "\\sum_{n=0}^{\\infty}{(-1)^nf(n)}", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontColor->GrayLevel[0.5],ExpressionUUID->
+  "741fc0d5-3a98-4a85-a34e-e43d1dbce5e1"],
+ StyleBox[" je konvergentn\[IAcute] a jej\[IAcute] sou\[CHacek]et budeme zna\
+\[CHacek]it ",
+  FontColor->GrayLevel[0.5]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[<|"boxes" -> FormBox[
+        StyleBox["s", "TI"], TraditionalForm], "errors" -> {}, "input" -> "s",
+       "state" -> "Boxes"|>,
+     "TeXAssistantTemplate"], " "}], TraditionalForm]],
+  FontColor->GrayLevel[0.5],ExpressionUUID->
+  "5fd0f47a-3702-475d-88dd-4686eae8ab1a"],
+ StyleBox[". P\[RHacek]erovnejme tuto \[RHacek]adu podle n\[AAcute]sleduj\
+\[IAcute]c\[IAcute]ho postupu:\n",
+  FontColor->GrayLevel[0.5]],
+ StyleBox["- Vezm\[EHacek]me prvn\[IAcute]ch ",
+  FontColor->GrayLevel[0.5],
+  Background->RGBColor[1, 1, 0]],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["p", "TI"], TraditionalForm], "errors" -> {}, "input" -> "p", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontColor->GrayLevel[0.5],
+  Background->RGBColor[1, 1, 0],ExpressionUUID->
+  "23f83802-9ba9-4e75-8651-98d57294318e"],
+ StyleBox[" kladn\[YAcute]ch \[CHacek]len\[URing] \[RHacek]ady a JAK TO M\
+\[CapitalAAcute]M INTELIGENTN\[CapitalEHacek] \
+\[CapitalRHacek]\[CapitalIAcute]CT???      Na prvn\[IAcute]ch p m\[IAcute]st \
+p\[RHacek]erovnan\[EAcute] \[RHacek]ady dejme prvn\[IAcute]ch p \
+kladn\[YAcute]ch \[CHacek]len\[URing] \[RHacek]ady p\[URing]vodn\[IAcute], na \
+dal\[SHacek]\[IAcute]ch q m\[IAcute]st dejme prvn\[IAcute]ch q z\[AAcute]porn\
+\[YAcute]ch \[CHacek]len\[URing] p\[URing]vodn\[IAcute] \[RHacek]ady a takto \
+pokra\[CHacek]ujme d\[AAcute]l. V\[ZHacek]dy vezm\[EHacek]me dal\[SHacek]\
+\[IAcute]ch p kladn\[YAcute]ch \[CHacek]len\[URing] a p\[RHacek]idejme je do \
+p\[RHacek]erovnan\[EAcute] \[RHacek]ady a stejn\[EHacek] tak dal\[SHacek]\
+\[IAcute]ch q z\[AAcute]porn\[YAcute]ch \[CHacek]len\[URing].\n- \
+Vezm\[EHacek]me prvn\[IAcute]ch ",
+  FontColor->GrayLevel[0.5],
+  Background->RGBColor[1, 1, 0]],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["q", "TI"], TraditionalForm], "errors" -> {}, "input" -> "q", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontColor->GrayLevel[0.5],
+  Background->RGBColor[1, 1, 0],ExpressionUUID->
+  "10d3c06a-76e4-427b-b26b-cfd3fba6de23"],
+ StyleBox[" kladn\[YAcute]ch \[CHacek]len\[URing] \[RHacek]ady a ???",
+  FontColor->GrayLevel[0.5],
+  Background->RGBColor[1, 1, 0]],
+ StyleBox["\n- Opakujme prvn\[IAcute] dva kroky s takto modifikovanou \
+\[RHacek]adou.\nPak t\[IAcute]mto postupem p\[RHacek]erovnan\[AAcute] \
+\[RHacek]ada konverguje a jej\[IAcute]m sou\[CHacek]tem je ",
+  FontColor->GrayLevel[0.5]],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         StyleBox["S", "TI"], "\[LongEqual]", 
+         StyleBox["s", "TI"], "+", 
+         FractionBox["1", "2"], 
+         StyleBox["K", "TI"], "ln", 
+         FractionBox[
+          StyleBox["p", "TI"], 
+          StyleBox["q", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "S = s + \\frac{1}{2}K\\ln{\\frac{p}{q}}", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontColor->GrayLevel[0.5],ExpressionUUID->
+  "f96288ba-e2fa-4493-806a-46430ff7eacc"],
+ StyleBox[". ",
+  FontColor->GrayLevel[0.5]]
+}], "Text",
+ CellChangeTimes->{{3.8550696972724466`*^9, 3.85506977457983*^9}, {
+  3.8550699661164722`*^9, 3.855069995402092*^9}, {3.8550700699571257`*^9, 
+  3.8550701070164227`*^9}, {3.8550701436143007`*^9, 3.8550704046449556`*^9}, {
+  3.855070435819235*^9, 3.8550704434951534`*^9}, {3.8550705378790846`*^9, 
+  3.855070540155272*^9}, {3.855070638608655*^9, 3.855070640038904*^9}, {
+  3.855071685417489*^9, 3.8550716875812073`*^9}, {3.8550717259100323`*^9, 
+  3.855071741689386*^9}, {3.855072866564662*^9, 3.8550728736362143`*^9}, {
+  3.855155483940502*^9, 3.855155634458132*^9}},
+ CellTags->"veta",ExpressionUUID->"9b7818c7-8f0a-4351-bcaa-2f89fbb5e7ad"],
+
+Cell[TextData[{
+ "V na\[SHacek]em p\[RHacek]\[IAcute]pad\[EHacek] je zjevn\[EHacek] ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         StyleBox["K", "TI"], "\[LongEqual]", "1"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "K = 1", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "7eba1166-10c7-4953-8b76-2df04e67b48a"],
+ " a zvol\[IAcute]me za parametry ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         StyleBox["p", "TI"], "\[LongEqual]", "3"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "p = 3", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "4e425236-4777-4137-bd6c-c2ea0f699b6e"],
+ " a ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         StyleBox["q", "TI"], "\[LongEqual]", "2"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "q = 2", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "92f72260-edf9-4107-af1a-f31c14d0c809"],
+ " ",
+ StyleBox["(pozn\[AAcute]mka: JAK M\[CapitalAAcute]M VOLIT p,q A CO KDY\
+\[CapitalZHacek] p=q???)(p,q se vol\[IAcute] libovoln\[EHacek] a kdy\[ZHacek] \
+p=q tak vyjde \[CHacek]len nav\[IAcute]c nulov\[YAcute] a sou\[CHacek]et z\
+\[URing]stane stejn\[YAcute].",
+  Background->RGBColor[1, 1, 0]],
+ " Dle V\[EHacek]ty z\[IAcute]sk\[AAcute]me t\[IAcute]mto p\[RHacek]erovn\
+\[AAcute]n\[IAcute]m \[RHacek]adu se sou\[CHacek]tem ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         StyleBox["S", "TI"], "\[LongEqual]", "ln", "2", "+", 
+         FractionBox["1", "2"], "ln", 
+         FractionBox["3", "2"], "\[LongEqual]", "0.8958797346140275"}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "S = \\ln 2 + \\frac{1}{2} \\ln\\frac{3}{2} = 0.8958797346140275", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "aad08c70-31ed-47e3-a159-50dd1c7217f1"],
+ ".\nP\[RHacek]erovn\[AAcute]n\[IAcute] provedeme n\[AAcute]sleduj\[IAcute]c\
+\[IAcute] sekvenc\[IAcute] p\[RHacek]\[IAcute]kaz\[URing]:"
+}], "Text",
+ CellChangeTimes->{{3.8550705594778*^9, 3.8550706353197794`*^9}, {
+   3.8550707713525248`*^9, 3.855070822571067*^9}, {3.8550712250204773`*^9, 
+   3.85507127324961*^9}, {3.855071354810266*^9, 3.855071356062377*^9}, 
+   3.855071486993291*^9, {3.855073247665801*^9, 3.855073260439827*^9}, {
+   3.8551557712080264`*^9, 
+   3.855155797364832*^9}},ExpressionUUID->"566243ac-032f-43fc-943a-\
+bdd4cc1054ce"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"K", " ", "=", " ", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"p", " ", "=", " ", "3"}], ";", " ", 
+   RowBox[{"q", " ", "=", " ", "2"}], ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"volba", " ", "parametr\[URing]"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"kladne", " ", "=", " ", 
+    RowBox[{"Select", "[", 
+     RowBox[{"cleny", ",", " ", 
+      RowBox[{
+       RowBox[{"#", ">", "0"}], "&"}]}], "]"}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"v\[YAcute]b\[EHacek]r", " ", 
+    RowBox[{"kladn\[YAcute]ch", "/", "z\[AAcute]porn\[YAcute]ch"}], " ", 
+    "\[CHacek]len\[URing]"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"zaporne", " ", "=", " ", 
+   RowBox[{"Select", "[", 
+    RowBox[{"cleny", ",", " ", 
+     RowBox[{
+      RowBox[{"#", "<", "0"}], "&"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"kladneSkupiny", " ", "=", " ", 
+    RowBox[{"Partition", "[", 
+     RowBox[{"kladne", ",", "p"}], "]"}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"seskupen\[IAcute]", " ", 
+     RowBox[{"kladn\[YAcute]ch", "/", "z\[AAcute]porn\[YAcute]ch"}], " ", 
+     "\[CHacek]len\[URing]", " ", "do", " ", "p"}], "-", " ", 
+    RowBox[{"resp", ".", " ", "q"}], "-", 
+    RowBox[{"\[CHacek]lenn\[YAcute]ch", " ", "skupin"}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"zaporneSkupiny", " ", "=", 
+   RowBox[{"Partition", "[", 
+    RowBox[{"zaporne", ",", "q"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"prerovnani", "=", " ", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"kladneSkupiny", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], ",", " ", 
+        RowBox[{"zaporneSkupiny", "[", 
+         RowBox[{"[", "i", "]"}], "]"}]}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", " ", "1", ",", "16"}], "}"}]}], "]"}]}], ";"}], " ", 
+  StyleBox[
+   RowBox[{"(*", " ", 
+    RowBox[{"PRO\[CapitalCHacek]", " ", "16", 
+     RowBox[{"??", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"?", " ", 
+         RowBox[{"proto\[ZHacek]e", " ", 
+          RowBox[{"100", "/", "2"}]}]}], "=", "50"}], ",", 
+       RowBox[{
+        RowBox[{"50", "/", "3"}], "=", "16"}], ",", "xx"}]}]}], "*)"}],
+   Background->RGBColor[1, 1, 0]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"prerovnani", " ", "=", " ", 
+   RowBox[{"Flatten", "[", "prerovnani", "]"}]}], ";", " ", 
+  RowBox[{"(*", 
+   RowBox[{"odstran\[EHacek]n\[IAcute]", " ", "z\[AAcute]vorek"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"castecneSouctyPrerovnane", " ", "=", " ", 
+   RowBox[{"Accumulate", "[", "prerovnani", "]"}]}], ";", " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "posloupnost", " ", "\[CHacek]\[AAcute]ste\[CHacek]n\[YAcute]ch", " ", 
+    "sou\[CHacek]t\[URing]", " ", "p\[RHacek]erovnan\[EAcute]", " ", 
+    "\[RHacek]ady"}], "*)"}], "\[IndentingNewLine]"}]}], "Input",
+ CellChangeTimes->{{3.855052663229624*^9, 3.8550527543951735`*^9}, 
+   3.855070568812564*^9, {3.855070842826446*^9, 3.8550708712409534`*^9}, {
+   3.855070947812065*^9, 3.8550709508093133`*^9}, {3.8550713579408836`*^9, 
+   3.8550714067916503`*^9}, {3.8550729104118285`*^9, 
+   3.8550730044059515`*^9}, {3.8551557089591675`*^9, 3.855155714963936*^9}, {
+   3.8551557454995613`*^9, 
+   3.855155759029399*^9}},ExpressionUUID->"c4825c78-9dea-447f-90db-\
+0bc06eaf3c9d"],
+
+Cell["Nyn\[IAcute] si vypi\[SHacek]me, jak vypad\[AAcute] \[RHacek]ada po p\
+\[RHacek]erovn\[AAcute]n\[IAcute]:", "Text",
+ CellChangeTimes->{{3.855070988185351*^9, 
+  3.855071019889141*^9}},ExpressionUUID->"7f54620b-39b8-4c8d-8df7-\
+4389d5ec26d0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Short", "[", 
+  RowBox[{"prerovnani", ",", "3"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8550710255001388`*^9, 3.8550710267703357`*^9}, {
+  3.855071077434047*^9, 3.8550710972733865`*^9}},
+ CellLabel->
+  "In[236]:=",ExpressionUUID->"c6064bc9-8682-4e39-8c7a-e47ebf5b9e2a"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"{", 
+   RowBox[{"1", ",", 
+    FractionBox["1", "3"], ",", 
+    FractionBox["1", "5"], ",", 
+    RowBox[{"-", 
+     FractionBox["1", "2"]}], ",", 
+    RowBox[{"-", 
+     FractionBox["1", "4"]}], ",", 
+    FractionBox["1", "7"], ",", 
+    FractionBox["1", "9"], ",", 
+    FractionBox["1", "11"], ",", 
+    RowBox[{"-", 
+     FractionBox["1", "6"]}], ",", 
+    RowBox[{"-", 
+     FractionBox["1", "8"]}], ",", 
+    FractionBox["1", "13"], ",", 
+    FractionBox["1", "15"], ",", 
+    FractionBox["1", "17"], ",", 
+    RowBox[{"-", 
+     FractionBox["1", "10"]}], ",", 
+    RowBox[{"-", 
+     FractionBox["1", "12"]}], ",", 
+    FractionBox["1", "19"], ",", 
+    RowBox[{"\[LeftSkeleton]", "49", "\[RightSkeleton]"}], ",", 
+    FractionBox["1", "79"], ",", 
+    FractionBox["1", "81"], ",", 
+    FractionBox["1", "83"], ",", 
+    RowBox[{"-", 
+     FractionBox["1", "54"]}], ",", 
+    RowBox[{"-", 
+     FractionBox["1", "56"]}], ",", 
+    FractionBox["1", "85"], ",", 
+    FractionBox["1", "87"], ",", 
+    FractionBox["1", "89"], ",", 
+    RowBox[{"-", 
+     FractionBox["1", "58"]}], ",", 
+    RowBox[{"-", 
+     FractionBox["1", "60"]}], ",", 
+    FractionBox["1", "91"], ",", 
+    FractionBox["1", "93"], ",", 
+    FractionBox["1", "95"], ",", 
+    RowBox[{"-", 
+     FractionBox["1", "62"]}], ",", 
+    RowBox[{"-", 
+     FractionBox["1", "64"]}]}], "}"}],
+  Short[#, 3]& ]], "Output",
+ CellChangeTimes->{3.855071099432192*^9},
+ CellLabel->
+  "Out[236]//Short=",ExpressionUUID->"ecb755dd-9aec-4b42-b490-e8484018863c"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Konvergenci posloupnosti \[CHacek]\[AAcute]ste\[CHacek]n\[YAcute]ch sou\
+\[CHacek]t\[URing] k \[CHacek]\[IAcute]slu ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["S", "TI"], TraditionalForm], "errors" -> {}, "input" -> "S", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "48af6ef9-dad3-45b9-bac8-287388d295f2"],
+ " zn\[AAcute]zor\[NHacek]uje Graf 2:"
+}], "Text",
+ CellChangeTimes->{{3.8550718133618984`*^9, 
+  3.8550718487327127`*^9}},ExpressionUUID->"74322a52-f408-4df3-8d16-\
+1e5c72d764a8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"(*", 
+    RowBox[{
+    "PRO\[CapitalCHacek]", " ", "TO", " ", "VYKRESL\[CapitalIAcute]", " ", 
+     "I", " ", "DATA", " ", "NEP\[CapitalRHacek]EROVNAN\[CapitalEAcute]", 
+     RowBox[{"??", "?"}]}], "*)"}],
+   Background->RGBColor[1, 1, 0]], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"castecneSouctyPrerovnanePlot", " ", "=", " ", 
+     RowBox[{"ListPlot", "[", "castecneSouctyPrerovnane", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"limita", "=", " ", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Log", "[", "2", "]"}], " ", "+", " ", 
+        RowBox[{
+         RowBox[{"1", "/", "2"}], "*", 
+         RowBox[{"Log", "[", 
+          RowBox[{"p", "/", "q"}], "]"}]}]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"X", ",", " ", "1", ",", " ", 
+         RowBox[{"Length", "[", "castecneSouctyPrerovnane", "]"}]}], "}"}]}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Show", "[", 
+    RowBox[{
+    "limita", ",", " ", "castecneSouctyPrerovnanePlot", ",", "%21", ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"HoldForm", "[", 
+         TemplateBox[<|"boxes" -> FormBox[
+             StyleBox["n", "TI"], TraditionalForm], "errors" -> {}, "input" -> 
+           "n", "state" -> "Boxes"|>,
+          "TeXAssistantTemplate"], "]"}], ",", 
+        RowBox[{"HoldForm", "[", 
+         TemplateBox[<|"boxes" -> FormBox[
+             SubscriptBox[
+              StyleBox["a", "TI"], 
+              StyleBox["n", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+           "a_n", "state" -> "Boxes"|>,
+          "TeXAssistantTemplate"], "]"}]}], "}"}]}], ",", 
+     RowBox[{"PlotLabel", "\[Rule]", 
+      RowBox[{
+      "HoldForm", "[", 
+       "\"\<Graf 2: Konvergence \
+posl.\[CHacek]\[AAcute]ste\[CHacek]n\[YAcute]ch sou\[CHacek]t\[URing] p\
+\[RHacek]erovnan\[EAcute] \[RHacek]ady\>\"", "]"}]}], ",", 
+     RowBox[{"LabelStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"GrayLevel", "[", "0", "]"}], "}"}]}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.8550718790756893`*^9, 3.8550718863078628`*^9}, {
+   3.855071934481742*^9, 3.8550719866748657`*^9}, 3.855072239198197*^9, {
+   3.855072359158114*^9, 3.8550723824529943`*^9}, {3.8550724554449897`*^9, 
+   3.855072456299841*^9}, {3.855079445795086*^9, 3.855079463251208*^9}, {
+   3.855079604505595*^9, 3.855079605208136*^9}},
+ CellLabel->
+  "In[265]:=",ExpressionUUID->"a5486b2b-3299-4b4b-a2a0-3772ed0075fd"],
+
+Cell[BoxData[
+ GraphicsBox[{{{{}, {}, 
+     TagBox[
+      {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], 
+       Opacity[1.], LineBox[CompressedData["
+1:eJxTTMoPSmViYGAwAWIQbbTgxAZGhg/2TApav7hXv7GPOP+k7nD6Hzjfvr5h
+2aF0FgcYX2Vqak/QWwE4P9NagnuDiTicr6nTdrk1RhbOz13L+v0rixKcr/aW
+T32+kiqcf/20coNAswacf8xf7N/ey9pwvmjN+XmJr/Xg/PXKXlueKRnC+c13
++1dN32wE53/LdNmcZmMC5z89Wndh5jNTOJ+lTOa/e4k5nD//q71TlLIlnH/T
+/dL0rlNWcL7zu+P/TENt4HytFOcqV0Y7ON9RT4n9wgR7OP9VsnPI/QUOcD6z
+lO661FJHON+k6sSEldZOiPA8tKx2vpAznK+zxexz0G0Ev5n/X6HoAhc4f0YQ
+x+/OUlc4/6j9EZ49Nm5w/gaRwxoLRNzh/NdBP30nv0Dw7awf/nZe5wHn+3Pz
+bFnW4gnnV7S++HLMxwvO/5jxx+6bgDecr2ESPPn6UwS/fGV0QdkaHzi/hW15
++PFmXzh/Je+S41d9/OB82bobDp8F/eH8gGv+Rw49R/B9c2xeLA8PgPMDE4uK
+jx9G8P9yuTS/0w2E87d25oV/mYDg+9TsMgj+g+C/d44/NyEhCM63OjD/w9VD
+CH7KBkaJEt1gOH9W6R7mjxMQ/J6VNXUVJxD8+rs2P///R/ABQnhe0g==
+        "]]},
+      Annotation[#, "Charting`Private`Tag$34907#1"]& ]}, {}}, {{}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.011000000000000001`],
+      AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxVkH0s1HEcx+/c4VaJMFMzkVyXmTzkIeTeXOfZOXekWSoXPedhozYPo6hl
+icpCrlSj0iZ5+COpCbPLlTystGopY7I8xEyFZSq+nz/6brffXvt8Xq/vd2et
+SlIk6HA4HPnf37/vypkW///lIGr5/GAsQP6Ff2eOsRFj2jfFuuXzjbE53GIq
+XWMqJxlb4JK2rEBbRvtW4Ko/VwoNZhhvwsPBwzO/Or4z3sx4jLEQhoLPkRu9
+qCeCkx3ntG/sFGM7rNJLqblyi/r2GHxfazu9mnoOcHXgZ0jjxhk7QhTU/fWk
+EfWckB8XGXi+hPadcdtk5HXDAvVdYDCl9iqsp/3tjKnniqheM7n3/ARjN4QM
+T6urRNRzh+5FHWcrCfU8UJzo1crLpN4OzL+9Izw2RD1P6Py0da8Zo54XFt49
+8B8bon1vqEeKR+e6qL8TQlNZr3oPzX3Q1zKX7s8jX4zqrgpJ7SAx0PkhOf5p
+A9vPAS43Tybnp1PPF1/uNTxPE9PcFyWmhaeGN5DvB83v68mHPjDO8YNQIO9L
+KaL7JXhwu8a4ZSfr5UhQVqTmPrSn+S7G5O9Cu36/3qc31JdCVZ12PzOV7pdC
+xA8vMjCk9/nD3WRfhYUlzf2xlJeeUOhJfgCK72oTc3qoH4Ci2sdXPfbT/YF4
+Ed14bt0Y+YGQBXeHZxnTPAhnsri5dVLyg6CMzzb4/Yr6wUg9wXXgy8gPRmRq
+9to1XeSHwObIs4ElAc1DcDR7vaJPRn4oAvy05mZa6odCJqoq76H/mxOGZrfO
+WcdG8sPwaGCpfgOX5jLoukTpJ+8mXwaB50Gbag31w5H20c1uyIX8cPDzmkal
+FeTLccAkYyBxge1Djgv5A/yRvdSTI/qlk7i0g3GrHEu2trzmreRH4HW/avRE
+AWNEQNGV1tY0S34EHHKHbySpyI9A4bBksaed3qeAtSZo27wV+QpsmX1Sx8+i
+9yoQbFU/opkiX4H2UlGsz2HylVDdPLsoaaP3K9G8yOPFrCdfCUueJuRaEuNW
+JcpnciWp4+RHrvDxCfEf7HZ8bw==
+      "]]}, {{}, {}}}, {{{}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668],
+       AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxVy39M1HUcx/GTkF1u8cPORsQfSCcikXmIgnp0L8BDUDiOO+AOCH8kYLay
+BoFHZsNGyhALxg83fpnRkh871BUipxMQaJwbEBKGAYP4JRqwGwYGmCXxff3R
+e9/vPnvtsef6dz/SJFqJRKKE5//yu3IWxf9fEVaeYWGLUVO9fI+EbS/sEWFL
+4PDfPRS2I27eWL5RYTtj2Fr1/JsUtouwx4Ttila/gRa/gQfCliJvTVXumiq6
+G9KN3o2teXR3dFllS5we0D0g8xAd94+ne+LC6voxZ8m4sDejeeN9G8V2+hZh
+02WoePHGpIsj3Quy6cdp1hH0rZCKb414iujeyD4mDclPom/D1Onq6pqpCWFv
+x/G6hHyVge6Dc0fmHE8M0H3hu/ablg1n6DuQ8dipr6eTvhNdQ0NuTfn0XWib
+bUh2b6HL8dnBwk1F5XQ/bBNfanRooL8N6ZPCWlElXYE3HZ0aA67QIWzBM4AN
+C2WdGZV0f3iLjYNf19P90fvK+c/LL9IDUJr1g9L+Fj0AyUUxtoYSeiAWsj7p
+G22hB8KpKGjBUkjfjTBzuqfUTN+NddXzvrO5dCXGyraKJzroSkhOK6yO5tCD
+EFtWmrbzLj0IpkrNr8os+h5cDs8ueOsefQ+8Jid6T2TSg3HGT/5G9316MK7W
+pW4RnaKH4CWlr9umQXoIasf7fjKfpO9Fb9yuGcUwfS9K6iX3fv6Uvg8utRuv
+OI/S96GuM63B1kAPRe6XYwVt4/RQ5Hx19/rJVHoYLpvM04pJehgmD7cNO6bQ
+VTjQL9fnPqKrILttGun/mB4O41XDb6Ypejg6GhYXbx+jq1f2jOBQo7bZ0H/n
+A8Ez1PDqvtZTYxG8SQ27gqRiy/vsI3D+tZn1hln2EShfZa6QHWUfAdWiVuvx
+J/sImMQG49kj7DUo87fJa51jr8HFYInxaSJ7Da75N7cHP2GvwesjBV1fJLDX
+Iinu2x+v/8VeizlrabLzYfZaJD4z/b5ukb0W3go75/ZD7CPR2VdZd2iJfSRS
+vUvTMw+yj4RDa3xK2VP2kRhOKdGpD7CPQvv0DsWdv9lHwV1VfMFjP/so2McW
+uD58xj4KFfLiyLXx7KMR1N5uu/QP+2iEzvvm2rzDPhqllsEh0SphN0VDPu+T
+YRPHXod6c8/+JTp0sPOISnCIZa9Dx+D3gX9YsddBNvpejlsMez0Gzr3s0/0C
+ez1uvtoYrdSz1+NSvOsvRmv2enxXWbH5Qx37GGgtmVWnVk8o/gUScO0f
+       "]]}, {{}, {}}}, {{{}, {}, 
+      TagBox[
+       {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], 
+        Opacity[1.], LineBox[CompressedData["
+1:eJxTTMoPSmViYGAwAWIQ7Z0SKcfE8MH+veWvf056z+x3aT1UPtj9H86fUrFF
+5EA3uwOML3X6mrqCsQic79zdY5gtKAPnHwrSaJN8ogjnr9/67ICusBqc77nx
+YOHxX5pw/gamn/mCZnpw/sQD0a/P6BnC+Qo+J29eljOG86cxPX23ycIUzk9i
+5d9/Rc8czt8yr+awqLQlnP8macY7PUNrOL+6+NCVLmVbOP/DulkP99nbw/ll
+DtGCnCsd4Pz5/gX8IQsc4XzrkjsK3Wuc4Hym/ef7Hy9zhvNt5aWENLa5wPm7
+vdr0ag64wvkpcypXfNzhBuc3MB8xDT7mDucfnzBV4dpBDzg/8GXH0owdnnC+
+X/hl2+eHvRDufb3EuH2vN5wvNPWsjfAZHzj/I6fEg3VXfeH830tePsg+6wfn
+V4QKfRW55Q/nC4glbs7PCoDzWZ977ox5iuBvcbp3Yn9WIEK/oVm78XME/9sq
+S3/ZvCA4v3M7wzHxNwj+vpU3OGelB8P5a9Riwie9RfA3mC0Onp0VAufnXZwa
+KfUJwT8bOFNHsTwUzndKTVhn8RnBL2C+bHmsMgzhXhPOkpTvCP5M74DqrqJw
+ON/irVOP2g8E/43iT+/LJRFwvt69/QszdyH4+bPavv//j+ADAOf7ryI=
+         "]]},
+       Annotation[#, "Charting`Private`Tag$20057#1"]& ]}, {}}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox[
+     TagBox["n", HoldForm], TraditionalForm], 
+    FormBox[
+     TagBox[
+      SubscriptBox["a", "n"], HoldForm], TraditionalForm]},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  LabelStyle->{
+    GrayLevel[0]},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotLabel->FormBox[
+    TagBox[
+    "\"Graf 2: Konvergence posl.\[CHacek]\[AAcute]ste\[CHacek]n\[YAcute]ch \
+sou\[CHacek]t\[URing] p\[RHacek]erovnan\[EAcute] \[RHacek]ady\"", HoldForm], 
+    TraditionalForm],
+  PlotRange->{{1, 80}, {0., 1.791759469228055}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.8550724610532217`*^9},
+ CellTags->"graf2",
+ CellLabel->
+  "Out[267]=",ExpressionUUID->"fcded86e-8c06-46e1-b80b-78303907e421"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ " Z\[AAcute]v\[EHacek]r"
+}], "Section",
+ CellChangeTimes->{
+  3.8550323463842134`*^9, {3.8550324442251263`*^9, 3.855032466181671*^9}, {
+   3.855032519002516*^9, 3.8550325199391203`*^9}, {3.855032557304383*^9, 
+   3.8550326359034014`*^9}, {3.8550331020240355`*^9, 3.855033119585178*^9}, 
+   3.855072477173355*^9},ExpressionUUID->"533cc0bd-bb89-4af8-8113-\
+41b0d18a7511"],
+
+Cell[TextData[{
+ "Byla zkoum\[AAcute]na neabsolutn\[EHacek] konvergentn\[IAcute] \[RHacek]ada \
+",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{
+            StyleBox["k", "TI"], "\[LongEqual]", "1"}], "\[Infinity]", 
+          LimitsPositioning -> True], 
+         FractionBox[
+          SuperscriptBox[
+           RowBox[{"(", "-1", ")"}], 
+           RowBox[{
+             StyleBox["k", "TI"], "-", "1"}]], 
+          StyleBox["k", "TI"]], "\[LongEqual]", "ln", "2"}], TraditionalForm],
+      "errors" -> {}, "input" -> 
+     "\\sum_{k=1}^{\\infty}{\\frac{(-1)^{k-1}}{k}} = \\ln{2}", "state" -> 
+     "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "4dc0246e-d0bd-4c96-aa92-4e0b639d7816"],
+ ". Jej\[IAcute]m p\[RHacek]erovn\[AAcute]n\[IAcute]m dle ",
+ ButtonBox["Schl\[ODoubleDot]milchovy v\[EHacek]ty",
+  BaseStyle->"Hyperlink",
+  ButtonData->"veta"],
+ " jsme z\[IAcute]skali \[RHacek]adu o sou\[CHacek]tu ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         StyleBox["S", "TI"], "\[LongEqual]", "0.8958797346140275", ">", "ln",
+          "2"}], TraditionalForm], "errors" -> {}, "input" -> 
+     "S = 0.8958797346140275 > \\ln 2", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "ee7d56ec-ca28-4be8-b9e5-85c80e88d6a3"],
+ ", co\[ZHacek] demonstruje fakt, \[ZHacek]e po p\[RHacek]erovn\[AAcute]n\
+\[IAcute] \[CHacek]len\[URing] nemus\[IAcute] m\[IAcute]t \[RHacek]ada stejn\
+\[YAcute] sou\[CHacek]et jako p\[RHacek]ed \
+p\[RHacek]erovn\[AAcute]n\[IAcute]m. V\[YAcute]sledky byly graficky zn\
+\[AAcute]zorn\[EHacek]ny v Grafu ",
+ ButtonBox["1",
+  BaseStyle->"Hyperlink",
+  ButtonData->"graf1"],
+ " a ",
+ ButtonBox["2",
+  BaseStyle->"Hyperlink",
+  ButtonData->"graf2"],
+ ".\n"
+}], "Text",
+ CellChangeTimes->{{3.855033121935854*^9, 3.8550331355170193`*^9}, {
+  3.855072522281275*^9, 3.8550725278169675`*^9}, {3.8550725587193146`*^9, 
+  3.8550726326337876`*^9}, {3.855072670381094*^9, 3.8550727283367424`*^9}, {
+  3.8550731440695095`*^9, 3.8550731440704737`*^9}, {3.855073178375332*^9, 
+  3.855073178377327*^9}, {3.8550732222215586`*^9, 
+  3.855073222223553*^9}},ExpressionUUID->"514a31aa-1e12-4e9a-a099-\
+ea17ad9a456d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ " Zdroje"
+}], "Section",
+ CellChangeTimes->{
+  3.8550323463842134`*^9, {3.8550324442251263`*^9, 3.855032466181671*^9}, {
+   3.855032519002516*^9, 3.8550325199391203`*^9}, {3.855032557304383*^9, 
+   3.8550325886756477`*^9}, {3.855032647494647*^9, 3.855032662715659*^9}, {
+   3.855033141095707*^9, 3.85503314454533*^9}, 
+   3.855072481629142*^9},ExpressionUUID->"c20f5bce-0537-47af-8e26-\
+e08c47fcc36a"],
+
+Cell[TextData[{
+ "\t",
+ StyleBox["1",
+  FontVariations->{"CompatibilityType"->"Superscript"}],
+ "\t",
+ "KOP\[CapitalAAcute]\[CapitalCHacek]EK",
+ ",",
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"Ji\[RHacek]\[IAcute]", ".", " ", "Matematick\[AAcute]"}], " ", 
+    "anal\[YAcute]za", " ", "nejen", " ", "pro", " ", "fyziky", " ", 
+    RowBox[{
+     RowBox[{"(", "II", ")"}], ".", " ", "4."}], " ", 
+    RowBox[{"vyd", ".", " ", 
+     RowBox[{"Praha", ":", " ", "Matfyzpress"}]}]}], TraditionalForm]],
+  ExpressionUUID->"deb4eea2-21f5-4aa1-8662-88a949e69500"],
+ ",",
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"2015.", " ", "ISBN", " ", "978"}], "-", "80", "-", "7378", "-", 
+    "282", "-", "5."}], TraditionalForm]],ExpressionUUID->
+  "e158ef1d-748f-4aab-94c2-5e2f742aedf2"]
+}], "Reference",
+ Editable->False,
+ TaggingRules->{ReferenceNoteData -> ""},
+ CellTags->"00009601",ExpressionUUID->"4ba790de-c794-4ed6-8086-aaa2fb110c01"],
+
+Cell[TextData[{
+ "\t",
+ StyleBox["2",
+  FontVariations->{"CompatibilityType"->"Superscript"}],
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"PR\[CapitalURing]\[CapitalSHacek]A", " ", 
+    RowBox[{"V", "."}]}], TraditionalForm]],ExpressionUUID->
+  "93249ad5-2ad3-489a-a242-147744310265"],
+ ",",
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"T\[CapitalURing]MA", " ", 
+      RowBox[{"K", ".", " ", "Rearrangement"}], " ", "of", " ", "non"}], "-", 
+     RowBox[{"absolute", " ", "convergent", " ", "series"}], " ", "-", " ", 
+     RowBox[{"how", " ", "to", " ", "prove", " ", "that", " ", "1"}]}], " ", 
+    "=", " ", 
+    RowBox[{"2.", " ", "MFF", " ", "UK"}]}], TraditionalForm]],ExpressionUUID->
+  "63ed0433-ea5a-4f14-8acc-4c27c8b25f5b"],
+ ",",
+ " ",
+ "2022."
+}], "Reference",
+ Editable->False,
+ TaggingRules->{ReferenceNoteData -> ""},
+ CellTags->"00009290",ExpressionUUID->"5e773205-9c3a-47d4-a837-793db868171a"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1141.2, 574.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (February 4, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7d1674d7-6b42-481e-b417-bec9d5c4e5e7"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "graf1"->{
+  Cell[10928, 296, 6235, 126, 258, "Output",ExpressionUUID->"cb69b7a1-8512-4f42-97d6-3db500a8bf57",
+   CellTags->"graf1"]},
+ "veta"->{
+  Cell[19614, 485, 7181, 171, 240, "Text",ExpressionUUID->"9b7818c7-8f0a-4351-bcaa-2f89fbb5e7ad",
+   CellTags->"veta"]},
+ "graf2"->{
+  Cell[38156, 958, 6390, 133, 259, "Output",ExpressionUUID->"fcded86e-8c06-46e1-b80b-78303907e421",
+   CellTags->"graf2"]},
+ "00009601"->{
+  Cell[47810, 1183, 953, 29, 28, "Reference",ExpressionUUID->"4ba790de-c794-4ed6-8086-aaa2fb110c01",
+   CellTags->"00009601"]},
+ "00009290"->{
+  Cell[48766, 1214, 938, 29, 28, "Reference",ExpressionUUID->"5e773205-9c3a-47d4-a837-793db868171a",
+   CellTags->"00009290"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"graf1", 50083, 1258},
+ {"veta", 50218, 1261},
+ {"graf2", 50351, 1264},
+ {"00009601", 50490, 1267},
+ {"00009290", 50633, 1270}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1411, 29, 194, "Title",ExpressionUUID->"c86a791d-dff2-49f3-8926-edee2968f52a"],
+Cell[1994, 53, 350, 5, 31, "Subsubtitle",ExpressionUUID->"b33b5329-21da-4760-9506-3b690e4aa9d2"],
+Cell[CellGroupData[{
+Cell[2369, 62, 269, 8, 67, "Section",ExpressionUUID->"5d63ac4e-51be-459b-97f1-243d32fb3c3f"],
+Cell[2641, 72, 342, 7, 35, "Text",ExpressionUUID->"9824c942-79d8-4c51-861f-f232f8b86a79"],
+Cell[CellGroupData[{
+Cell[3008, 83, 870, 26, 48, "Input",ExpressionUUID->"2352efb2-099a-4471-a784-1cc486c546df"],
+Cell[3881, 111, 598, 18, 48, "Output",ExpressionUUID->"b0baa5a7-b9ec-42f9-b5f3-0061445bb7e5"]
+}, Open  ]],
+Cell[4494, 132, 165, 2, 28, "Input",ExpressionUUID->"3c460200-b9d7-40e8-866f-0caa29b54c29"],
+Cell[4662, 136, 478, 9, 35, "Text",ExpressionUUID->"5124646d-6345-42bd-817f-e8ccf225e8dd"],
+Cell[CellGroupData[{
+Cell[5165, 149, 404, 8, 67, "Input",ExpressionUUID->"5aaa2908-1456-4e9d-be98-b51eb0deeff7"],
+Cell[5572, 159, 769, 17, 97, "Output",ExpressionUUID->"90214b67-001e-4a19-b0b2-e196dfad5ffb"]
+}, Open  ]],
+Cell[6356, 179, 2331, 56, 63, "Text",ExpressionUUID->"0fa321be-de72-4d12-bfa3-00fedba5c815"],
+Cell[8690, 237, 362, 9, 58, "Text",ExpressionUUID->"c8fb231f-2147-4340-8b51-c8bb16bc4cdd"],
+Cell[CellGroupData[{
+Cell[9077, 250, 1848, 44, 110, "Input",ExpressionUUID->"e1eac042-543f-44d0-a875-0a4ae4ff5f51"],
+Cell[10928, 296, 6235, 126, 258, "Output",ExpressionUUID->"cb69b7a1-8512-4f42-97d6-3db500a8bf57",
+ CellTags->"graf1"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17212, 428, 495, 12, 105, "Section",ExpressionUUID->"6dd62f2a-4e44-40f3-bfa1-33b92a98276e"],
+Cell[17710, 442, 1901, 41, 91, "Text",ExpressionUUID->"766bd780-753e-4c28-8711-827c7238e86e"],
+Cell[19614, 485, 7181, 171, 240, "Text",ExpressionUUID->"9b7818c7-8f0a-4351-bcaa-2f89fbb5e7ad",
+ CellTags->"veta"],
+Cell[26798, 658, 2590, 57, 100, "Text",ExpressionUUID->"566243ac-032f-43fc-943a-bdd4cc1054ce"],
+Cell[29391, 717, 3454, 89, 200, "Input",ExpressionUUID->"c4825c78-9dea-447f-90db-0bc06eaf3c9d"],
+Cell[32848, 808, 247, 4, 35, "Text",ExpressionUUID->"7f54620b-39b8-4c8d-8df7-4389d5ec26d0"],
+Cell[CellGroupData[{
+Cell[33120, 816, 294, 6, 28, "Input",ExpressionUUID->"c6064bc9-8682-4e39-8c7a-e47ebf5b9e2a"],
+Cell[33417, 824, 1553, 50, 97, "Output",ExpressionUUID->"ecb755dd-9aec-4b42-b490-e8484018863c"]
+}, Open  ]],
+Cell[34985, 877, 593, 14, 35, "Text",ExpressionUUID->"74322a52-f408-4df3-8d16-1e5c72d764a8"],
+Cell[CellGroupData[{
+Cell[35603, 895, 2550, 61, 110, "Input",ExpressionUUID->"a5486b2b-3299-4b4b-a2a0-3772ed0075fd"],
+Cell[38156, 958, 6390, 133, 259, "Output",ExpressionUUID->"fcded86e-8c06-46e1-b80b-78303907e421",
+ CellTags->"graf2"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44595, 1097, 412, 10, 67, "Section",ExpressionUUID->"533cc0bd-bb89-4af8-8113-41b0d18a7511"],
+Cell[45010, 1109, 2316, 56, 134, "Text",ExpressionUUID->"514a31aa-1e12-4e9a-a099-ea17ad9a456d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47363, 1170, 444, 11, 67, "Section",ExpressionUUID->"c20f5bce-0537-47af-8e26-e08c47fcc36a"],
+Cell[47810, 1183, 953, 29, 28, "Reference",ExpressionUUID->"4ba790de-c794-4ed6-8086-aaa2fb110c01",
+ CellTags->"00009601"],
+Cell[48766, 1214, 938, 29, 28, "Reference",ExpressionUUID->"5e773205-9c3a-47d4-a837-793db868171a",
+ CellTags->"00009290"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
