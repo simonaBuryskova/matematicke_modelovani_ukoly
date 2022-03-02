@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     51836,       1298]
-NotebookOptionsPosition[     47464,       1210]
-NotebookOutlinePosition[     48698,       1248]
-CellTagsIndexPosition[     48524,       1239]
+NotebookDataLength[     51838,       1298]
+NotebookOptionsPosition[     47466,       1210]
+NotebookOutlinePosition[     48700,       1248]
+CellTagsIndexPosition[     48526,       1239]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1089,7 +1089,7 @@ Cell[TextData[{
           StyleBox["k", "TI"]], "\[LongEqual]", "ln", "2"}], TraditionalForm],
       "errors" -> {}, "input" -> 
      "\\sum_{k=1}^{\\infty}{\\frac{(-1)^{k-1}}{k}} = \\ln{2}", "state" -> 
-     "TeX"|>,
+     "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
   "4dc0246e-d0bd-4c96-aa92-4e0b639d7816"],
  ". Jej\[IAcute]m p\[RHacek]erovn\[AAcute]n\[IAcute]m dle ",
@@ -1212,7 +1212,7 @@ WindowSize->{1141.2, 574.8},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"14583d8e-cc8b-4ad3-b8fd-597c38a9b3aa"
+ExpressionUUID->"c4fc4def-37b4-490d-8fd8-957c23f93e3f"
 ]
 (* End of Notebook Content *)
 
@@ -1222,27 +1222,27 @@ CellTagsIndex->{
  "graf1"->{
   Cell[10977, 298, 6235, 126, 258, "Output",ExpressionUUID->"cb69b7a1-8512-4f42-97d6-3db500a8bf57",
    CellTags->"graf1"]},
- "veta"->{
-  Cell[19663, 487, 7768, 191, 171, "Text",ExpressionUUID->"9b7818c7-8f0a-4351-bcaa-2f89fbb5e7ad",
-   CellTags->"veta"]},
  "graf2"->{
   Cell[38231, 964, 4061, 91, 255, InheritFromParent,ExpressionUUID->"fcded86e-8c06-46e1-b80b-78303907e421",
    CellTags->"graf2"]},
- "00009601"->{
-  Cell[45542, 1146, 953, 29, 28, "Reference",ExpressionUUID->"4ba790de-c794-4ed6-8086-aaa2fb110c01",
-   CellTags->"00009601"]},
+ "veta"->{
+  Cell[19663, 487, 7768, 191, 171, "Text",ExpressionUUID->"9b7818c7-8f0a-4351-bcaa-2f89fbb5e7ad",
+   CellTags->"veta"]},
  "00009290"->{
-  Cell[46498, 1177, 938, 29, 28, "Reference",ExpressionUUID->"5e773205-9c3a-47d4-a837-793db868171a",
-   CellTags->"00009290"]}
+  Cell[46500, 1177, 938, 29, 28, "Reference",ExpressionUUID->"5e773205-9c3a-47d4-a837-793db868171a",
+   CellTags->"00009290"]},
+ "00009601"->{
+  Cell[45544, 1146, 953, 29, 28, "Reference",ExpressionUUID->"4ba790de-c794-4ed6-8086-aaa2fb110c01",
+   CellTags->"00009601"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"graf1", 47815, 1221},
- {"veta", 47950, 1224},
- {"graf2", 48083, 1227},
- {"00009601", 48230, 1230},
- {"00009290", 48373, 1233}
+ {"graf1", 47817, 1221},
+ {"graf2", 47953, 1224},
+ {"veta", 48096, 1227},
+ {"00009290", 48232, 1230},
+ {"00009601", 48375, 1233}
  }
 *)
 (*NotebookFileOutline
@@ -1290,13 +1290,13 @@ Cell[38231, 964, 4061, 91, 255, InheritFromParent,ExpressionUUID->"fcded86e-8c06
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[42329, 1060, 412, 10, 67, "Section",ExpressionUUID->"533cc0bd-bb89-4af8-8113-41b0d18a7511"],
-Cell[42744, 1072, 2314, 56, 118, "Text",ExpressionUUID->"514a31aa-1e12-4e9a-a099-ea17ad9a456d"]
+Cell[42744, 1072, 2316, 56, 134, "Text",ExpressionUUID->"514a31aa-1e12-4e9a-a099-ea17ad9a456d"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[45095, 1133, 444, 11, 67, "Section",ExpressionUUID->"c20f5bce-0537-47af-8e26-e08c47fcc36a"],
-Cell[45542, 1146, 953, 29, 28, "Reference",ExpressionUUID->"4ba790de-c794-4ed6-8086-aaa2fb110c01",
+Cell[45097, 1133, 444, 11, 67, "Section",ExpressionUUID->"c20f5bce-0537-47af-8e26-e08c47fcc36a"],
+Cell[45544, 1146, 953, 29, 28, "Reference",ExpressionUUID->"4ba790de-c794-4ed6-8086-aaa2fb110c01",
  CellTags->"00009601"],
-Cell[46498, 1177, 938, 29, 28, "Reference",ExpressionUUID->"5e773205-9c3a-47d4-a837-793db868171a",
+Cell[46500, 1177, 938, 29, 28, "Reference",ExpressionUUID->"5e773205-9c3a-47d4-a837-793db868171a",
  CellTags->"00009290"]
 }, Open  ]]
 }, Open  ]]
